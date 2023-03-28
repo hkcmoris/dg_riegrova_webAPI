@@ -34,9 +34,8 @@ pip install dg_riegrova_webapi
 ### Usage
 
 ```python
-from dg_riegrova_webapi import RiegrovaWebAPI
+from dg_riegrova_webapi import RiegrovaWebAPI as api
 
-api = RiegrovaWebAPI()
 api.login("username", "password")
 result = api.example_get_function()
 api.example_post_function(data)
