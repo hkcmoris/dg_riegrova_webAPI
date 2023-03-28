@@ -41,11 +41,11 @@ you need to create a file called `dg_riegrova_webapi.config.json` in the same di
 }
 ```
 
-if you want to use admin functions, you need to create .env file in the same directory as your script.
+I suggest you create .env file in the same directory as your script and store your admin credentials there.
 
 ```bash
-ADMIN_USER="admin_username"
-ADMIN_PASS="admin_password"
+ADMIN_USER="username"
+ADMIN_PASS="password"
 ```
 
 ### Usage
@@ -54,7 +54,7 @@ ADMIN_PASS="admin_password"
 from dg_riegrova_webapi import RiegrovaWebAPI as api
 
 api.init()
-api.login("username", "password")
+api.login(os.getenv('ADMIN_USER'), os.getenv('ADMIN_PASS'))
 result = api.example_get_function()
 api.example_post_function(data)
 ```
