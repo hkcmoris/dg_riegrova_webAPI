@@ -31,6 +31,23 @@ install the package with pip:
 pip install dg_riegrova_webapi
 ```
 
+you need to create a file called `dg_riegrova_webapi.config.json` in the same directory as your script.
+
+```json
+{
+  "baseurl": "http://www.skolka-riegrova.cz",
+  "adminlogin": "/prihlaseni/",
+  "admindashboard": "/admin/webstructadmin/show/"
+}
+```
+
+if you want to use admin functions, you need to create .env file in the same directory as your script.
+
+```bash
+ADMIN_USER="admin_username"
+ADMIN_PASS="admin_password"
+```
+
 ### Usage
 
 ```python
